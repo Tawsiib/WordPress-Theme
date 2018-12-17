@@ -119,6 +119,18 @@ function philosophy_about_us_widgets(){
 
         )
     );
+    register_sidebar(
+        array(
+            'name'          => __('Before Footer Right side', 'philosophy'),
+            'id'            => 'before-footer-right',
+            'description'   => __('This widgets is for before footer right sidebar', 'philosophy'),
+            'before_widget' => '<div id="%1$s" class="%2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3>',
+            'after_title'   => '</h3>',
+
+        )
+    );
 }
 
 add_action('widgets_init','philosophy_about_us_widgets');
