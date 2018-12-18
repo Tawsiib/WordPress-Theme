@@ -41,9 +41,9 @@ get_header();
 
                 <form name="cForm" id="cForm" method="post" action="">
                     <?php
-                    if (get_field('contact_form_shortcode')) {
+                    if ( get_field('contact_form_shortcode') ) {
                         echo do_shortcode(get_field('contact_form_shortcode'));
-                        }
+                    }
                     ?>
                 </form> <!-- end form -->
 

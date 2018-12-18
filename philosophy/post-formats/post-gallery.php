@@ -8,7 +8,7 @@
                 <div class="slider__slides">
                     <?php while ( $attachment = $attachments->get() ): ?>
                         <div class="slider__slide">
-                            <?php echo $attachments->image('philosophy-square');?>
+                            <?php echo wp_kses_post($attachments->image('philosophy-square'));?>
                         </div>
                     <?php endwhile; ?>
                 </div>

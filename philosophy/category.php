@@ -9,7 +9,7 @@
                 <h1><?php single_cat_title(); ?></h1>
 
                 <p class="lead">
-                    <?php echo category_description();?>
+                    <?php echo category_description(); ?>
                 </p>
             </div>
         </div>
@@ -17,16 +17,16 @@
             <div class="masonry">
                 <div class="grid-sizer"></div>
 
-                <?php if (!have_posts()): ?>
-                <h3 class="text-center">
-                    <?php _e("There is no post under this category","philosophy"); ?>
-                </h3>
+                <?php if ( !have_posts() ): ?>
+                    <h3 class="text-center">
+                        <?php _e("There is no post under this category", "philosophy"); ?>
+                    </h3>
                 <?php endif; ?>
 
                 <?php
-                while(have_posts()){
+                while ( have_posts() ) {
                     the_post();
-                    get_template_part('/post-formats/post',get_post_format());
+                    get_template_part('/post-formats/post', get_post_format());
                 }
                 ?>
 
@@ -36,7 +36,7 @@
         <div class="row">
             <div class="col-full">
                 <nav class="pgn">
-                    <?php philosophy_pagination();?>
+                    <?php philosophy_pagination(); ?>
                 </nav>
             </div>
         </div>

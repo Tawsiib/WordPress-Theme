@@ -31,9 +31,9 @@ get_header();
 
                 <div class="row block-1-2 block-tab-full">
                     <?php
-                        if (is_active_sidebar("about-us")){
-                            dynamic_sidebar("about-us");
-                        }
+                    if ( is_active_sidebar("about-us") ) {
+                        dynamic_sidebar("about-us");
+                    }
                     ?>
                 </div>
 

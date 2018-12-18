@@ -62,7 +62,7 @@ get_header();
                             <?php if ( $philosophy_author_facebook ): ?>
                                 <li>
                                     <a href="<?php echo esc_url($philosophy_author_facebook); ?>">
-                                        <?php _e("Facebook","philosophy") ?>
+                                        <?php _e("Facebook", "philosophy") ?>
                                     </a>
                                 </li>
                             <?php endif; ?>
@@ -70,7 +70,7 @@ get_header();
                             <?php if ( $philosophy_author_twitter ): ?>
                                 <li>
                                     <a href="<?php echo esc_url($philosophy_author_twitter); ?>">
-                                        <?php _e("Twitter","philosophy") ?>
+                                        <?php _e("Twitter", "philosophy") ?>
                                     </a>
                                 </li>
                             <?php endif; ?>
@@ -78,7 +78,7 @@ get_header();
                             <?php if ( $philosophy_author_instagram ): ?>
                                 <li>
                                     <a href="<?php echo esc_url($philosophy_author_instagram); ?>">
-                                        <?php _e("Instagram","philosophy") ?>
+                                        <?php _e("Instagram", "philosophy") ?>
                                     </a>
                                 </li>
                             <?php endif; ?>
