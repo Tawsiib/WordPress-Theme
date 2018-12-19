@@ -14,10 +14,6 @@ if ( ! isset( $content_width ) ) $content_width = 960; // apply condition for co
  * Implement TGM Plugin Activation
  */
 require_once(get_theme_file_path('/inc/tgm.php'));
-/**
- * Include Social icons widgets
- */
-require_once(get_theme_file_path('/inc/social-icons.php'));
 
 /**
  * Implement Additional Feature & Attachments for gallery Post
