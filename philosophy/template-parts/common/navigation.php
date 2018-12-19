@@ -6,12 +6,12 @@
 
     <?php $philosophy_menu = wp_nav_menu(
         array(
-            'theme_location' => 'topmenu',
-            'menu_id'        => 'topmenu',
+            'theme_location' => 'top-menu',
+            'menu_id'        => 'top-menu',
             'menu_class'     => 'header__nav',
             'echo'           => false,
         ));
-        $philosophy_menu = str_replace('menu-item-has-child','menu-item-has-child has-children',$philosophy_menu);
+        $philosophy_menu = str_replace('menu-item-has-children','has-children menu-item-has-children',$philosophy_menu);
         echo wp_kses_post($philosophy_menu);
     ?>
 

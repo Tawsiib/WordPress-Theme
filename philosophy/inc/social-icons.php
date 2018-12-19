@@ -177,9 +177,9 @@
 
 	} // class Foo_Widget
 
-	function social_icons_widget()
-	{
-		register_widget( 'Social_Icons_Widget' );
-	}
+function social_icons_widget()
+{
+    register_widget( 'Social_Icons_Widget' );
+}
 
-	add_action( 'widgets_init', 'social_icons_widget' );
+add_action( 'widgets_init', 'social_icons_widget' );

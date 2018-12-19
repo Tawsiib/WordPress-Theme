@@ -8,6 +8,7 @@ if ( site_url() == 'http://localhost/wordpress/' ) {
 } else {
     define('VERSION', wp_get_theme()->get('Version'));
 }
+if ( ! isset( $content_width ) ) $content_width = 960; // apply condition for content width
 
 /**
  * Implement TGM Plugin Activation
@@ -33,8 +34,9 @@ function philosophy_theme_setup(){
     add_editor_style('/assets/css/editor-style.css');
     add_theme_support('html5', array('comment-form', 'comment-list', 'gallery', 'caption'));
     add_theme_support('post-formats', array('quote', 'audio', 'video', 'link', 'gallery', 'image'));
-    register_nav_menu('topmenu', __('Top Menu', 'philosophy'));
+    add_theme_support( 'automatic-feed-links' );
     register_nav_menus(array(
+                           'top-menu' =>__('Top Menu', 'philosophy'),
                            'footer-left'   => __('Footer Left Menu','philosophy'),
                            'footer-middle' => __('Footer Middle Menu','philosophy'),
                            'footer-right'  => __('Footer Right Menu','philosophy'),
@@ -62,6 +64,7 @@ function philosophy_assets(){
     wp_enqueue_script('modernizr-js', get_theme_file_uri('/assets/js/modernizr.js'), null, 1.0, false);
     wp_enqueue_script('pace-min-js', get_theme_file_uri('/assets/js/pace.min.js'), null, 1.0, false);
     wp_enqueue_script('plugin-js', get_theme_file_uri('/assets/js/plugins.js'), array('jquery'), 1.0, true);
+    if ( is_singular() ) wp_enqueue_script( "comment-reply" );
     wp_enqueue_script('main', get_theme_file_uri('/assets/js/main.js'), array('jquery'), 1.0, true);
 
 }
@@ -171,7 +174,6 @@ function philosophy_about_us_widgets(){
             'after_widget'  => '</div>',
             'before_title'  => '',
             'after_title'   => '',
-
         )
     );
 }
@@ -195,3 +197,5 @@ Form;
 return $new_form;
 }
 add_filter('get_search_form','philosophy_search_form');
+
+

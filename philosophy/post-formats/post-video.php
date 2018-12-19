@@ -5,7 +5,7 @@ if ( function_exists("the_field") ) {
 }
 ?>
 
-<article class="masonry__brick entry format-video" data-aos="fade-up">
+<article <?php post_class("masonry__brick entry format-video"); ?> data-aos="fade-up">
 
     <div class="entry__thumb video-image">
         <a href="<?php echo esc_url($philosophy_video_file);?>?color=01aef0&title=0&byline=0&portrait=0"
