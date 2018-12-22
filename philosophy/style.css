@@ -2,24 +2,16 @@
  Theme Name: Philosophy
  Theme URI:
  Author: Asib Ikbal
- Author URI:
- Description: Philosophy Template designed by colorlib..
+ Author URI: https://facebook.com/asib.ikbal
+ Description: A beautiful blogging WordPress Theme.
  Version: 1.0
- Tags: blog
+ Tags: blog,left-sidebar,right-sidebar,grid-layout,custom-menu,custom-logo,featured-images,post-formats,education,translation-ready – Required
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain: philosophy
  */
 
-.sticky{
 
-}
-.gallery-caption{
-
-}
-.bypostauthor{
-
-}
 
 /* =WordPress Core
 -------------------------------------------------------------- */
@@ -129,4 +121,13 @@ a img.aligncenter {
     width: auto;
     z-index: 100000;
     /* Above WP toolbar. */
+}
+.sticky{
+
+}
+.gallery-caption{
+
+}
+.bypostauthor{
+
 }
