@@ -19,6 +19,10 @@ require_once(get_theme_file_path('/inc/tgm.php'));
  * Implement Additional Feature & Attachments for gallery Post
  */
 require_once(get_theme_file_path('/inc/attachments.php'));
+/**
+ * Include code for post meta-boxes
+ */
+require_once(get_theme_file_path('/inc/acf-meta.php'));
 
 function philosophy_theme_setup(){
 
