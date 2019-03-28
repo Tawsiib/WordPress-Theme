@@ -78,6 +78,11 @@ function mark_register_required_plugins() {
 			'slug'      => 'piklist',
 			'required'  => true,
 		),
+        array(
+			'name'      => 'Woocommerce',
+			'slug'      => 'woocommerce',
+			'required'  => false,
+		),
 
 	);
 

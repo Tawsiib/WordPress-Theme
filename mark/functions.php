@@ -1,5 +1,4 @@
 <?php
-
     require_once (get_theme_file_path("/inc/tgmpa.php"));
 
     define('VERSION',time());
@@ -123,3 +122,7 @@
         }
         return $fields;
     }
+    function my_remove_filters(){
+        remove_filter('piklist_admin_pages', array('piklist_setting', 'admin_pages'));
+    }
+    add_action( 'after_setup_theme', 'my_remove_filters' );
