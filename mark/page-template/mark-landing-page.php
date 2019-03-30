@@ -13,39 +13,6 @@
     }
 ?>
 
-
-
-    <!--blog section start-->
-    <section class="blog-block" id="blog">
-        <!--<div class="">-->
-        <div class="row">
-            <div class="col-md-6 align-self-center">
-
-                <div class="img-block-txt">
-                    <div class="section-title">
-                        <h2 class="title ">Blog</h2>
-                    </div>
-                    <h2 class="mb-1"><a href="#">Years of experience in this domain</a></h2>
-                    <div class="meta mb-4">
-                        <a href="#" class="date">23 June</a>
-                        By
-                        <a href="#"> Jonathan Smith</a>
-                    </div>
-                    <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
-                        maxime
-                        placeat facere possimus. Nam libero tempore, cum soluta nobis est eligendi optio cumque </p>
-                    <a href="#" class="btn-link">View All Blog Post</a>
-                </div>
-            </div>
-            <div class="col-md-6 base-gradient blog-bg-height"
-                 style="background: url('<?php echo get_template_directory_uri() ?>./assets/img/b-img.jpg') center center / cover no-repeat; ">
-                <img src="<?php echo get_template_directory_uri() ?>./assets/img/b-img-1.jpg" alt=""/>
-            </div>
-        </div>
-        <!--</div>-->
-    </section>
-    <!--blog section end-->
-
     <!-- clients section start -->
     <section class="client-section">
         <div class="container">
