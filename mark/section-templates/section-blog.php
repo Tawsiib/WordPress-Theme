@@ -7,7 +7,6 @@
                                        'order'          => 'DESC',
                                        'status'         => 'publish'
                                    ));
-                                   print_r($mark_posts);
     if (count($mark_posts)>0):
 ?>
 <!--blog section start-->
