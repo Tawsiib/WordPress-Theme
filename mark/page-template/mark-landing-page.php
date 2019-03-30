@@ -13,30 +13,7 @@
     }
 ?>
 
-    <!-- clients section start -->
-    <section class="client-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="clients-logo">
-                        <a href="#" class="client-item"><img
-                                    src="<?php echo get_template_directory_uri() ?>./assets/img/c1.jpg"
-                                    alt="Client"></a>
-                        <a href="#" class="client-item"><img
-                                    src="<?php echo get_template_directory_uri() ?>./assets/img/c2.jpg"
-                                    alt="Client"></a>
-                        <a href="#" class="client-item"><img
-                                    src="<?php echo get_template_directory_uri() ?>./assets/img/c3.jpg"
-                                    alt="Client"></a>
-                        <a href="#" class="client-item"><img
-                                    src="<?php echo get_template_directory_uri() ?>./assets/img/c4.jpg"
-                                    alt="Client"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- clients section end -->
+
 
     <!-- subscribe section start -->
     <section class="space-2 subscribe-from">
