@@ -8,7 +8,16 @@
                                        'status'         => 'publish'
                                    ));
     if (count($mark_posts)>0):
-?>
+        $mark_post_thumbnail = get_the_post_thumbnail_url($mark_posts[0],'mark-blog-landscape');
+        $mark_post_background = $mark_section_meta['background_image'][0];
+
+        if ($mark_post_background){
+            $mark_blog_bg = wp_get_attachment_image_src($mark_post_background,'mark-blog-bg');
+        }
+        else{
+            $mark_post_bg = array(get_template_directory_uri().'/assets/img/b-img.jpg');
+        }
+        ?>
 <!--blog section start-->
 <section class="blog-block" id="blog">
     <!--<div class="">-->
@@ -42,8 +51,8 @@
             </div>
         </div>
         <div class="col-md-6 base-gradient blog-bg-height"
-             style="background: url('<?php echo get_template_directory_uri() ?>./assets/img/b-img.jpg') center center / cover no-repeat; ">
-            <img src="<?php echo get_template_directory_uri() ?>./assets/img/b-img-1.jpg" alt=""/>
+             style="background: url('<?php echo esc_url($mark_blog_bg[0]) ?>') center center / cover no-repeat; ">
+            <img src="<?php if($mark_post_thumbnail){echo esc_url($mark_post_thumbnail);} ?>" alt=""/>
         </div>
     </div>
     <!--</div>-->

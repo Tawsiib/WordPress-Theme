@@ -22,6 +22,8 @@
                 'caption',
             ));
             register_nav_menu('', __('', 'mark'));
+            add_image_size('mark-blog-bg',1218 ,896,true);
+            add_image_size('mark-blog-landscape',583,383,true);
 
         }
     endif;

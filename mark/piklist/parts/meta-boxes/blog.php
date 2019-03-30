@@ -28,5 +28,10 @@
                     'class' => 'widefat'
                 )
             ),
+            array(
+                'type'  => 'file',
+                'field' => 'background_image',
+                'label' => __('Background Image', 'mark'),
+            ),
         )
     ));
