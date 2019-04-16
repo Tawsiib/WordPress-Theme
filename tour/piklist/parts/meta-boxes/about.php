@@ -70,8 +70,8 @@
                     ),
                     array(
                         'type'  => 'file',
-                        'field' => 'gallery_image',
-                        'label' => __('Gallery Image', 'tour'),
+                        'field' => 'image',
+                        'label' => __('Image', 'tour'),
                     ),
                 )
             ),
