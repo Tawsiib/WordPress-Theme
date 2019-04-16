@@ -4,7 +4,7 @@
     $nattours_section_meta = get_post_meta($nattours_section, 'nattours_pricing_section', true);
     if (isset($nattours_section_meta) && is_array($nattours_section_meta)):
         ?>
-        <section class="section-nattourss" id="<?php esc_attr_e($nattours_section_id->post_name); ?>">
+        <section class="section-tours" id="<?php esc_attr_e($nattours_section_id->post_name); ?>">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     <?php esc_html_e($nattours_section_meta['section-heading']); ?>

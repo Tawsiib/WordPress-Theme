@@ -40,7 +40,7 @@
                 'type'  => 'text',
                 'field' => 'icon',
                 'label' => __('Featured Icon Name', 'nattours'),
-                'value' => __('','nattours'),
+                'value' => __('icon-basic-world','nattours'),
                 'attributes' => array(
                     'class' => 'widefat'
                 )
