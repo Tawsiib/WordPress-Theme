@@ -56,18 +56,6 @@
                      class="composition__photo composition__photo--p<?php esc_attr_e($tour_counter++)?>"
                      src="<?php echo esc_url($tour_gallery_image_large[0])?>">
                 <?php endforeach; ?>
-
-<!--                <img srcset="--><?php //echo get_template_directory_uri()?><!--./assets/img/nat-2.jpg 300w, /assets/img/nat-2-large.jpg 1000w"-->
-<!--                     sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"-->
-<!--                     alt="Photo 2"-->
-<!--                     class="composition__photo composition__photo--p2"-->
-<!--                     src="--><?php //echo get_template_directory_uri()?><!--./assets/img/nat-2-large.jpg">-->
-<!---->
-<!--                <img srcset="--><?php //echo get_template_directory_uri()?><!--./assets/img/nat-3.jpg 300w, /assets/img/nat-3-large.jpg 1000w"-->
-<!--                     sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"-->
-<!--                     alt="Photo 3"-->
-<!--                     class="composition__photo composition__photo--p3"-->
-<!--                     src="--><?php //echo get_template_directory_uri()?><!--./assets/img/nat-3-large.jpg">-->
             </div>
         </div>
         <?php endif; ?>

@@ -4,6 +4,8 @@
     $tour_section_id = get_post($tour_section);
     $tour_arguments = array(
             'post_type' => 'story',
+            'meta_key' => 'is_recommended',
+            'meta_value' => 'yes',
             'post_status' => 'publish',
             'posts_per_page' => 2,
     );
@@ -45,7 +47,7 @@
      wp_reset_query();
     ?>
     <div class="u-center-text u-margin-top-huge">
-        <a href="<?php echo esc_url($tour_section_meta['button_url'])?>" class="btn-text">
+        <a href="<?php echo esc_url(home_url("/")."stories")?>" class="btn-text">
            <?php esc_html_e($tour_section_meta['button_label']) ?> &rarr;
         </a>
     </div>

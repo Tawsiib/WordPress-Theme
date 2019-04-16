@@ -28,15 +28,6 @@
                   'class' => 'widefat',
               )
             ),
-            array(
-              'type' => 'text',
-              'field' => 'button_url',
-              'label' =>__('Story Button URL','tour'),
-              'value' =>__('#','tour'),
-              'attributes' => array(
-                  'class' => 'widefat',
-              )
-            ),
         )
 
         )
