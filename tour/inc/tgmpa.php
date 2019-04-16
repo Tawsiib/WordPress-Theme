@@ -72,11 +72,17 @@ function tour_register_required_plugins() {
 			'is_callable'        => '', // If set, this callable will be be checked for availability to determine if a plugin is active.
 		),
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
-		array(
+        array(
+            'name'      => 'Classic-Editor',
+            'slug'      => 'classic-editor',
+            'required'  => true,
+        ),
+        array(
 			'name'      => 'Piklist',
 			'slug'      => 'piklist',
 			'required'  => true,
 		),
+
 
 
 	);
