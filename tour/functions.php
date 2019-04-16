@@ -1,9 +1,14 @@
 <?php
+    //require bundle plugin using tgm plugin activation
+    require_once (get_theme_file_path("/inc/tgmpa.php"));
+
+    //cache busting
     if ('http://localhost/wordpress' == site_url()) {
         define('VERSION', time());
     } else {
         define('VERSION', wp_get_theme()->get('Version'));
     }
+
     if (!function_exists('tour_theme_setup')) :
         /**
          * Sets up theme defaults and registers support for various WordPress features.
@@ -51,7 +56,6 @@
             wp_enqueue_script('tour-reservation-js', ASSET_DIR . 'js/reservation.js', array('jquery'), VERSION, true);
             $ajax_url = admin_url('admin-ajax.php');
             wp_localize_script('tour-reservation-js', 'toururl', array('ajaxurl' => $ajax_url));
-
         }
     }
     add_action('wp_enqueue_scripts', 'tour_assets');
@@ -62,7 +66,6 @@
             $classes[] = 'navigation__item';
         }
         return $classes;
-
     }
     add_filter('nav_menu_css_class', 'tour_add_menu_class', 10, 2);
 
@@ -80,7 +83,6 @@
     add_filter('nav_menu_link_attributes', 'tour_menu_item_link_class', 20, 2);
 
     function tour_nav_fix($menus) {
-        //
         $string_replace = home_url("/") . "section/";
         foreach ($menus as $menu) {
             $menu_url = str_replace($string_replace, "#", $menu->url);
@@ -184,3 +186,8 @@
     }
     add_action('wp_ajax_reserve', 'tour_reservation');
     add_action('wp_ajax_nopriv_reserve', 'tour_reservation');
+    //remove piklist icon from dashboard admin panel
+    function my_remove_filters(){
+        remove_filter('piklist_admin_pages', array('piklist_setting', 'admin_pages'));
+    }
+    add_action( 'after_setup_theme', 'my_remove_filters' );
