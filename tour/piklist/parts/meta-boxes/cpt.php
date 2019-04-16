@@ -2,7 +2,7 @@
     /**
      * Title: Story Recommendation
      * Post Type: story
-     * order: 20
+     * order:20
      */
     piklist('field',array(
         'type'    => 'radio',

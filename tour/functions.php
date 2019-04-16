@@ -104,7 +104,7 @@
         $section_post_type = get_post_type($section_id);
         if ('section' == $section_post_type) {
             $section_meta = get_post_meta($section_id, 'tour_section_type', true);
-            $sections     = array('banner', 'about', 'feature', 'pricing', 'reservation',);
+            $sections     = array('banner', 'about', 'feature', 'pricing', 'reservation','story');
             foreach ($sections as $section) {
                 if ("{$section}.php" == $part['part'] && "{$section}" != $section_meta) {
                     return false;
