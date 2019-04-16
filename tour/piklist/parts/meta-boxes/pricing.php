@@ -21,7 +21,7 @@
                            ),
                            array(
                                'type' => 'group',
-                               'field' => 'popup',
+                               'field' => 'pricing',
                                'label'    => __('Popup Details', 'tour'),
                                'add_more' => true,
                                'validate' => array(
@@ -36,52 +36,39 @@
                                'fields' => array(
                                    array(
                                        'type'       => 'text',
-                                       'field'      => 'popup-heading',
-                                       'label'      => __('Pop-Up Heading', 'tour'),
+                                       'field'      => 'heading',
+                                       'label'      => __('Pricing Heading', 'tour'),
                                        'value'      => __('Start Booking Now', 'tour'),
                                        'attributes' => array(
                                            'class' => 'widefat'
                                        )
                                    ),
                                    array(
-                                       'type'       => 'text',
-                                       'field'      => 'sub-heading',
-                                       'label'      => __('Pop-Up Sub-Heading', 'tour'),
-                                       'value'      => __('IMPORTANT – PLEASE READ THESE TERMS BEFORE BOOKING', 'tour'),
-                                       'attributes' => array(
-                                           'class' => 'widefat'
-                                       )
-                                   ),
-                                   array(
                                        'type'       => 'textarea',
-                                       'field'      => 'description',
-                                       'label'      => __('Pop-Up Description', 'tour'),
+                                       'field'      => 'options',
+                                       'label'      => __('Pricing Options', 'tour'),
                                        'attributes' => array(
                                            'class' => 'widefat'
                                        )
                                    ),
                                    array(
+                                       'type'       => 'number',
+                                       'field'      => 'price',
+                                       'label'      => __('Price', 'tour'),
+                                       'value'      => 297,
+                                       'attributes' => array(
+                                           'class' => 'widefat'
+                                       )
+                                   ),
+
+                                   array(
                                        'type'       => 'text',
-                                       'field'      => 'popup_button_label',
-                                       'label'      => __('Pop-Up Button Label', 'tour'),
+                                       'field'      => 'pricing_button_label',
+                                       'label'      => __('Pricing Button Label', 'tour'),
                                        'value'      => __('Book Now!', 'tour'),
                                        'attributes' => array(
                                            'class' => 'widefat'
                                        )
-                                   ),
-                                   array(
-                                       'type'       => 'text',
-                                       'field'      => 'popup_button_url',
-                                       'label'      => __('Pop-Up Button Url', 'tour'),
-                                       'value'      => __('Book Now!', 'tour'),
-                                       'attributes' => array(
-                                           'class' => 'widefat'
-                                       )
-                                   ),
-                                   array(
-                                       'type'  => 'file',
-                                       'field' => 'image',
-                                       'label' => __('Image', 'tour'),
                                    ),
                                ),
                            ),

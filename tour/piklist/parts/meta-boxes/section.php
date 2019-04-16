@@ -14,6 +14,5 @@
             'reservation' => __('Reservation', 'mark'),
             'story'       => __('Story', 'mark'),
             'pricing'     => __('Pricing', 'mark'),
-
         ),
     ));
