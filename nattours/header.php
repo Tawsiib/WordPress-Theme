@@ -24,6 +24,7 @@
             'container'       => 'nav',
             'container_class' => 'navigation__nav',
             'menu_class'      => 'navigation__list',
+            'link_before'     => '<span></span>'
         );
         echo wp_kses_post(wp_nav_menu($args));
         endif;

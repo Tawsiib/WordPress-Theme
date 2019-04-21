@@ -9,7 +9,9 @@
                 small: $("#small").val(),
                 large: $("#large").val()
             },function (data) {
-                console.log(data);
+
+                    document.getElementById("reservation-message").innerHTML=data;
+
             });
             return false;
         });

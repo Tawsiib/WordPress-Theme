@@ -20,10 +20,12 @@
             <?php _e('Your browser is not supported!','nattours'); ?>
         </video>
     </div>
-
     <div class="u-center-text u-margin-bottom-big">
         <h2 class="heading-secondary">
-            <?php esc_html_e($nattours_section_meta['story-heading']) ?>
+            <?php
+                $nattours_story_section_heading = isset($nattours_section_meta['story-heading'])?$nattours_section_meta['story-heading']:'';
+                esc_html_e($nattours_story_section_heading)
+            ?>
         </h2>
     </div>
     <?php
@@ -45,10 +47,12 @@
     <?php
      endwhile;
      wp_reset_query();
+     if ('yes' == $nattours_section_meta['is_recommended'][0]):
     ?>
     <div class="u-center-text u-margin-top-huge">
         <a href="<?php echo esc_url(home_url("/")."stories")?>" class="btn-text">
            <?php esc_html_e($nattours_section_meta['button_label']) ?> &rarr;
         </a>
     </div>
+    <?php endif; ?>
 </section>

@@ -41,7 +41,7 @@
                             </label>
                         </div>
                     </div>
-
+                    <p id="reservation-message"></p>
                     <div class="form__group">
                         <button class="btn btn--green" id="send-message"><?php _e('Next step','nattours'); ?> &rarr;</button>
                     </div>

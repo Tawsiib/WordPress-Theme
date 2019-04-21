@@ -22,7 +22,7 @@
                            array(
                                'type' => 'group',
                                'field' => 'pricing',
-                               'label'    => __('Popup Details', 'nattours'),
+                               'label'    => __('Pricing Details', 'nattours'),
                                'add_more' => true,
                                'validate' => array(
                                    array(
@@ -60,7 +60,6 @@
                                            'class' => 'widefat'
                                        )
                                    ),
-
                                    array(
                                        'type'       => 'text',
                                        'field'      => 'pricing_button_label',

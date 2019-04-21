@@ -20,6 +20,16 @@
               )
             ),
             array(
+                'type'    => 'radio',
+                'field'   => 'is_recommended',
+                'label'   => __('Do you want to show the button?','nattours'),
+                'value'   => 'no',
+                'choices' => array(
+                    'yes' => 'Yes',
+                    'no'  => 'No',
+                ),
+            ),
+            array(
               'type' => 'text',
               'field' => 'button_label',
               'label' =>__('Story Button Label','nattours'),

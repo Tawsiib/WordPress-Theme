@@ -1,6 +1,6 @@
 <?php
     //require bundle plugin using tgm plugin activation
-    require_once (get_theme_file_path("/inc/tgmpa.php"));
+    require_once(get_theme_file_path("/inc/tgmpa.php"));
 
     //cache busting
     if ('http://localhost/wordpress' == site_url()) {
@@ -55,7 +55,7 @@
         if (is_page_template('page-template/nattours-landing-page.php')) {
             wp_enqueue_script('nattours-reservation-js', ASSET_DIR . 'js/reservation.js', array('jquery'), VERSION, true);
             $ajax_url = admin_url('admin-ajax.php');
-            wp_localize_script('nattours-reservation-js', 'nattoursurl', array('ajaxurl' => $ajax_url));
+            wp_localize_script('nattours-reservation-js', 'toururl', array('ajaxurl' => $ajax_url));
         }
     }
     add_action('wp_enqueue_scripts', 'nattours_assets');
@@ -104,7 +104,7 @@
         $section_post_type = get_post_type($section_id);
         if ('section' == $section_post_type) {
             $section_meta = get_post_meta($section_id, 'nattours_section_type', true);
-            $sections     = array('banner', 'about', 'feature', 'pricing', 'reservation','story');
+            $sections     = array('banner', 'about', 'feature', 'pricing', 'reservation', 'story');
             foreach ($sections as $section) {
                 if ("{$section}.php" == $part['part'] && "{$section}" != $section_meta) {
                     return false;
@@ -156,9 +156,8 @@
                              'name'          => __('Footer Right Sidebar', 'nattours'),
                              'id'            => 'footer-right',
                              'description'   => __('Add Footer Text Here.', 'nattours'),
-                             'class'         => 'footer__copyright',
-                             'before_widget' => '<p id="%1$s" class="%2$s footer__copyright">',
-                             'after_widget'  => '</p>',
+                             'before_widget' => '',
+                             'after_widget'  => '',
                              'before_title'  => '',
                              'after_title'   => '',
                          ));
@@ -177,17 +176,26 @@
     function nattours_reservation() {
         $name        = $_POST['name'] ?? '';
         $email       = $_POST['email'] ?? '';
-        $small       = $_POST['small'] ?? '';
-        $large       = $_POST['large'] ?? '';
+        $small       = $_POST['small'];
+        $large       = $_POST['large'];
         $admin_email = get_option('admin_email');
         $_message    = sprintf("A Reservation From:%s\n Email:%s\n for %s %s plan", $name, $email, $small, $large);
         wp_mail($admin_email, __("someone tried to make a reservation for nattours", "nattours"), $_message);
-        die("Reservation Successful");
+        if (!empty($name)) {
+            if (!empty($email)){
+                die("Reservation Successful!");
+            }else{
+                die("Resevation Failed! You have to type your Email");
+            }
+        }else{
+            die("Resevation Failed! You have to type your Full Name");
+        }
     }
     add_action('wp_ajax_reserve', 'nattours_reservation');
     add_action('wp_ajax_nopriv_reserve', 'nattours_reservation');
+
     //remove piklist icon from dashboard admin panel
-    function nattours_remove_filters(){
+    function nattours_remove_filters() {
         remove_filter('piklist_admin_pages', array('piklist_setting', 'admin_pages'));
     }
-    add_action( 'after_setup_theme', 'nattours_remove_filters' );
+    add_action('after_setup_theme', 'nattours_remove_filters');
