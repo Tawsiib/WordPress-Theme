@@ -11,12 +11,6 @@ Tags: one-column, custom-header, blog
 Text Domain: nattours
 */
 
-.navigation__link>span{
-    counter-reset: nav-counter;
-    counter-increment: nav-counter;
-    content:"0"counter(nav-counter);
-}
-
 .textwidget>p {
     border-top: 1px solid #777;
     padding-top: 2rem;

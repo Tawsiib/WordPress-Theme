@@ -199,3 +199,13 @@
         remove_filter('piklist_admin_pages', array('piklist_setting', 'admin_pages'));
     }
     add_action('after_setup_theme', 'nattours_remove_filters');
+    
+    //add counter between span before link text for primary menu location
+    function nattours_nav_counter($title, $item, $args, $depth){
+        static $counter = 0;
+        if ('primary' === $args->theme_location){
+            $args->link_before = sprintf( '<span>0%d</span>', ++$counter );
+        }
+        return $title;
+    }
+    add_filter( 'nav_menu_item_title', 'nattours_nav_counter',10,4);
