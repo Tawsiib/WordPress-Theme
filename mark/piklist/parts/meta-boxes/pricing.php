@@ -71,7 +71,7 @@
                                    array(
                                        'type'    => 'radio',
                                        'field'   => 'is_recommended',
-                                       'label'   => 'Would you like to recommend this plan?',
+                                       'label'   => __('Would you like to recommend this plan?','mark'),
                                        'value'   => 'no',
                                        'choices' => array(
                                            'yes' => 'Yes',
