@@ -204,7 +204,7 @@
     function nattours_nav_counter($title, $item, $args, $depth){
         static $counter = 0;
         if ('primary' === $args->theme_location){
-            $args->link_before = sprintf( '<span>0%d</span>', ++$counter );
+            $args->link_before = sprintf( '<span>0%d</span> ', ++$counter );
         }
         return $title;
     }
