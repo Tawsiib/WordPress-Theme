@@ -1,2 +1,2 @@
-# WordPress-Theme (Educational Purpose)
+# WordPress-Theme
 Working Repository For WordPress Theme Development
